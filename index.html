@@ -820,29 +820,29 @@
   </footer>
 
   <!-- Auto‑countdown script -->
-  <script>
-    (function () {
-      // Easter 2026 (Sunday, March 31, 2026)
-      const easterDate = new Date("2026-03-31T00:00:00");
-      const updateBar = function () {
-        const now = new Date();
-        const diffTime = easterDate - now;
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        const bar = document.getElementById("top-bar");
-        if (bar) {
-          if (diffDays > 0) {
-            bar.textContent = `EASTER IS IN ${diffDays} DAY${diffDays !== 1 ? "S" : ""} – ORDER FLOWERS TODAY TO GUARANTEE DELIVERY`;
-          } else if (diffDays === 0) {
-            bar.textContent = `EASTER IS TODAY – ORDER FLOWERS RIGHT NOW TO GUARANTEE DELIVERY`;
-          } else {
-            bar.textContent = `EASTER HAS PASSED – CHECK BACK NEXT YEAR FOR EASTER FLOWERS`;
-          }
+ <script>
+  (function () {
+    // Easter 2026 (Sunday, March 31, 2026)
+    const easterDate = new Date("2026-03-31T00:00:00");
+    const updateBar = function () {
+      const now = new Date();
+      const diffTime = easterDate - now;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const bar = document.getElementById("top-bar");
+      if (bar) {
+        if (diffDays > 0) {
+          bar.textContent = `EASTER IS IN ${diffDays} DAY${diffDays !== 1 ? "S" : ""} – ORDER FLOWERS TODAY TO GUARANTEE DELIVERY`;
+        } else if (diffDays === 0) {
+          bar.textContent = `EASTER IS TODAY – ORDER FLOWERS RIGHT NOW TO GUARANTEE DELIVERY`;
+        } else {
+          bar.textContent = `EASTER HAS PASSED – CHECK BACK NEXT YEAR FOR EASTER FLOWERS`;
         }
-      };
-      updateBar();
-      setInterval(updateBar, 60000); // update every minute
-    })();
-  </script>
+      }
+    };
+    updateBar();
+    setInterval(updateBar, 60000); // update every minute
+  })();
+</script>
 
   <!-- SEO 10000x – long‑tail, blog‑style content for Google (never delete) -->
   <section id="seo-posts" class="seo-posts" style="background:#f0f4ff;padding:40px 0 0;font-size:0.95rem;color:#555;">
